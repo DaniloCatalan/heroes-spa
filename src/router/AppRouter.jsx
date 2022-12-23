@@ -1,10 +1,13 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { LoginPage } from '../auth/pages/LoginPage';
-import { DcPage, MarvelPage } from '../heores/pages';
+
+import { DcPage, MarvelPage } from '../heores';
+import { LoginPage } from '../auth';
+import { Navbar } from '../ui';
 
 export const AppRouter = () => {
   return (
     <>
+      <Navbar />
       <Routes>
         <Route path="marvel" element={<MarvelPage />} />
         <Route path="dc" element={<DcPage />} />
